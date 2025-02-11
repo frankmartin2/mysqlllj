@@ -1,0 +1,183 @@
+2025-01-26 16:21:38,813 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://142.171.111.95:5000
+2025-01-26 16:21:38,814 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 16:21:38,815 - INFO -  * Restarting with stat
+2025-01-26 16:21:39,468 - WARNING -  * Debugger is active!
+2025-01-26 16:21:39,469 - INFO -  * Debugger PIN: 131-452-074
+2025-01-26 16:21:47,138 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:47] "[32mGET /manage HTTP/1.1[0m" 302 -
+2025-01-26 16:21:47,400 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:47] "GET / HTTP/1.1" 200 -
+2025-01-26 16:21:47,930 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:47] "GET /static/styles.css HTTP/1.1" 200 -
+2025-01-26 16:21:48,423 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:48] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 16:21:48,896 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:48] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 16:21:55,120 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:55] "POST /test_connection HTTP/1.1" 200 -
+2025-01-26 16:21:57,043 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:57] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-01-26 16:21:57,346 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:57] "GET /manage HTTP/1.1" 200 -
+2025-01-26 16:21:57,864 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:57] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 16:21:58,376 - INFO - 184.22.33.23 - - [26/Jan/2025 16:21:58] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 16:23:10,255 - INFO - 184.22.33.23 - - [26/Jan/2025 16:23:10] "[35m[1mGET /manage?table_name=ads HTTP/1.1[0m" 500 -
+2025-01-26 16:23:10,517 - INFO - 184.22.33.23 - - [26/Jan/2025 16:23:10] "[36mGET /manage?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-01-26 16:23:10,518 - INFO - 184.22.33.23 - - [26/Jan/2025 16:23:10] "[36mGET /manage?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-01-26 16:23:11,017 - INFO - 184.22.33.23 - - [26/Jan/2025 16:23:11] "[36mGET /manage?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-01-26 16:57:46,762 - ERROR - 80.82.70.133 - - [26/Jan/2025 16:57:46] code 400, message Bad request version ("¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À")
+2025-01-26 16:57:46,762 - INFO - 80.82.70.133 - - [26/Jan/2025 16:57:46] "[35m[1m\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\x09T\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À[0m" HTTPStatus.BAD_REQUEST -
+2025-01-26 17:48:13,955 - INFO -  * Detected change in '/root/mysqlsession/app.py', reloading
+2025-01-26 17:48:14,111 - INFO -  * Restarting with stat
+2025-01-26 17:48:14,906 - WARNING -  * Debugger is active!
+2025-01-26 17:48:14,907 - INFO -  * Debugger PIN: 131-452-074
+2025-01-26 17:49:12,150 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:12] "GET / HTTP/1.1" 200 -
+2025-01-26 17:49:12,386 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:12] "GET /static/styles.css HTTP/1.1" 200 -
+2025-01-26 17:49:12,907 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:12] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:49:20,123 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:20] "POST /test_connection HTTP/1.1" 200 -
+2025-01-26 17:49:21,943 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:21] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-01-26 17:49:22,250 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:22] "GET /manage HTTP/1.1" 200 -
+2025-01-26 17:49:22,725 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:22] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:49:23,169 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:23] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:49:27,204 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:27] "GET /manage?table_name=ads HTTP/1.1" 200 -
+2025-01-26 17:49:27,476 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:27] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:49:27,978 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:27] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:49:32,619 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:32] "GET /manage?table_name=ads_position HTTP/1.1" 200 -
+2025-01-26 17:49:32,846 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:32] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:49:33,363 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:33] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:49:36,979 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:36] "GET /manage?table_name=ads_position&page=2&per_page=10 HTTP/1.1" 200 -
+2025-01-26 17:49:37,245 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:37] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:49:37,507 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:37] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:49:48,146 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:48] "GET /manage?table_name=ads_position&page=3&per_page=10 HTTP/1.1" 200 -
+2025-01-26 17:49:48,372 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:48] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:49:48,886 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:48] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:49:50,455 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:50] "GET /manage?table_name=ads_position HTTP/1.1" 200 -
+2025-01-26 17:49:50,677 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:50] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:49:51,191 - INFO - 184.22.33.23 - - [26/Jan/2025 17:49:51] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:50:26,652 - INFO - 184.22.33.23 - - [26/Jan/2025 17:50:26] "GET /manage?table_name=chapter HTTP/1.1" 200 -
+2025-01-26 17:50:26,925 - INFO - 184.22.33.23 - - [26/Jan/2025 17:50:26] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:50:27,431 - INFO - 184.22.33.23 - - [26/Jan/2025 17:50:27] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:53:01,598 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://142.171.111.95:5000
+2025-01-26 17:53:01,598 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 17:53:01,599 - INFO -  * Restarting with stat
+2025-01-26 17:53:02,469 - WARNING -  * Debugger is active!
+2025-01-26 17:53:02,470 - INFO -  * Debugger PIN: 131-452-074
+2025-01-26 17:53:06,631 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:06] "[32mGET /manage?table_name=chapter HTTP/1.1[0m" 302 -
+2025-01-26 17:53:06,892 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:06] "GET / HTTP/1.1" 200 -
+2025-01-26 17:53:07,406 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:07] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:53:07,914 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:07] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:53:12,889 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:12] "POST /test_connection HTTP/1.1" 200 -
+2025-01-26 17:53:14,941 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:14] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-01-26 17:53:15,247 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:15] "GET /manage HTTP/1.1" 200 -
+2025-01-26 17:53:15,762 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:53:16,235 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:16] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:53:30,656 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:30] "[32mPOST /connect_new_db HTTP/1.1[0m" 302 -
+2025-01-26 17:53:31,358 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:31] "GET /manage HTTP/1.1" 200 -
+2025-01-26 17:53:31,889 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:31] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:53:32,394 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:32] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:53:40,881 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:40] "GET /manage?table_name=admin_permission_menu HTTP/1.1" 200 -
+2025-01-26 17:53:41,149 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:41] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:53:41,403 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:41] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:53:51,997 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:51] "[32mGET /switch_db/cms HTTP/1.1[0m" 302 -
+2025-01-26 17:53:52,273 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:52] "GET /manage HTTP/1.1" 200 -
+2025-01-26 17:53:52,805 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:52] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:53:53,282 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:53] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 17:53:56,520 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:56] "GET /manage?table_name=videos HTTP/1.1" 200 -
+2025-01-26 17:53:56,746 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:56] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 17:53:57,400 - INFO - 184.22.33.23 - - [26/Jan/2025 17:53:57] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:09:52,057 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://142.171.111.95:5000
+2025-01-26 20:09:52,057 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 20:09:52,058 - INFO -  * Restarting with stat
+2025-01-26 20:09:52,916 - WARNING -  * Debugger is active!
+2025-01-26 20:09:52,917 - INFO -  * Debugger PIN: 104-492-835
+2025-01-26 20:09:58,625 - INFO - 184.22.33.23 - - [26/Jan/2025 20:09:58] "[32mGET /manage?table_name=videos HTTP/1.1[0m" 302 -
+2025-01-26 20:09:58,884 - INFO - 184.22.33.23 - - [26/Jan/2025 20:09:58] "GET / HTTP/1.1" 200 -
+2025-01-26 20:09:59,382 - INFO - 184.22.33.23 - - [26/Jan/2025 20:09:59] "GET /static/styles.css HTTP/1.1" 200 -
+2025-01-26 20:09:59,873 - INFO - 184.22.33.23 - - [26/Jan/2025 20:09:59] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:10:00,147 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:00] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:10:06,192 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:06] "POST /test_connection HTTP/1.1" 200 -
+2025-01-26 20:10:08,000 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:08] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-01-26 20:10:08,300 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:08] "GET /manage HTTP/1.1" 200 -
+2025-01-26 20:10:08,767 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:08] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:10:09,247 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:09] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:10:10,768 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:10] "GET /manage?table_name=agent_address HTTP/1.1" 200 -
+2025-01-26 20:10:10,997 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:10] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:10:11,502 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:11] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:10:15,280 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:15] "GET /manage?table_name=videos HTTP/1.1" 200 -
+2025-01-26 20:10:15,506 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:15] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:10:16,396 - INFO - 184.22.33.23 - - [26/Jan/2025 20:10:16] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:13:26,892 - INFO - 184.22.33.23 - - [26/Jan/2025 20:13:26] "GET /export_csv/videos HTTP/1.1" 200 -
+2025-01-26 20:14:22,729 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://142.171.111.95:5000
+2025-01-26 20:14:22,729 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-26 20:14:22,730 - INFO -  * Restarting with stat
+2025-01-26 20:14:23,315 - WARNING -  * Debugger is active!
+2025-01-26 20:14:23,316 - INFO -  * Debugger PIN: 104-492-835
+2025-01-26 20:14:25,565 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:25] "[32mGET /manage?table_name=videos HTTP/1.1[0m" 302 -
+2025-01-26 20:14:25,793 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:25] "GET / HTTP/1.1" 200 -
+2025-01-26 20:14:26,335 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:26] "GET /static/styles.css HTTP/1.1" 200 -
+2025-01-26 20:14:26,603 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:26] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:14:34,296 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:34] "POST /test_connection HTTP/1.1" 200 -
+2025-01-26 20:14:36,095 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:36] "[32mPOST / HTTP/1.1[0m" 302 -
+2025-01-26 20:14:36,374 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:36] "GET /manage HTTP/1.1" 200 -
+2025-01-26 20:14:36,895 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:36] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:14:37,404 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:37] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:14:40,148 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:40] "GET /manage?table_name=agent_level HTTP/1.1" 200 -
+2025-01-26 20:14:40,421 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:40] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:14:40,922 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:40] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:14:49,313 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:49] "GET /manage?table_name=videos HTTP/1.1" 200 -
+2025-01-26 20:14:49,580 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:49] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:14:50,585 - INFO - 184.22.33.23 - - [26/Jan/2025 20:14:50] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:15:02,514 - INFO - 184.22.33.23 - - [26/Jan/2025 20:15:02] "GET /manage?table_name=videos&per_page=50&page=1 HTTP/1.1" 200 -
+2025-01-26 20:15:02,740 - INFO - 184.22.33.23 - - [26/Jan/2025 20:15:02] "[36mGET /static/styles.css HTTP/1.1[0m" 304 -
+2025-01-26 20:15:04,051 - INFO - 184.22.33.23 - - [26/Jan/2025 20:15:04] "[33mGET /static/favicon.ico HTTP/1.1[0m" 404 -
+2025-01-26 20:39:51,041 - INFO -  * Detected change in '/root/mysqlsession/app.py', reloading
+2025-01-26 20:39:51,237 - INFO -  * Restarting with stat
+2025-01-26 20:45:25,252 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 20:49:32,468 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 20:49:43,504 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 20:59:00,427 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 20:59:00,697 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 20:59:08,181 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:03:27,611 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:03:36,523 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:03:46,838 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:05:40,468 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:05:40,957 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:05:48,410 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:05:50,368 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:05:56,116 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:05:57,360 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:12:08,420 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:12:20,269 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:15:07,459 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:15:23,215 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:15:26,343 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:22:16,594 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:22:48,886 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:22:49,159 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:34:15,647 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:00,139 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:00,664 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:03,697 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:03,967 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:05,643 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:05,913 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:07,463 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:07,992 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:42,575 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:41:42,849 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:52:56,673 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:52:57,197 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 21:53:08,166 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:10:07,477 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:10:07,950 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:10:13,955 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:10:14,474 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:10:31,276 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:24:43,089 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-26 22:24:43,562 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2025-01-27 00:30:21,603 - ERROR - 404 Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.

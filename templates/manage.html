@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据库管理工具</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <!-- 数据库标签和连接新数据库按钮 -->
+    <div class="db-tabs p-4 d-flex justify-content-between align-items-center">
+        <ul class="nav nav-pills">
+            {% for db_name in databases %}
+                <li class="nav-item">
+                    <a class="nav-link {% if db_name == current_db %}active{% endif %}" href="{{ url_for('switch_db', db_name=db_name) }}">{{ db_name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#newDbModal">
+                连接新数据库
+            </button>
+        </div>
+    </div>
+
+    <!-- 连接新数据库的模态框 -->
+    <div class="modal fade" id="newDbModal" tabindex="-1" aria-labelledby="newDbModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newDbModalLabel">连接新数据库</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 模态框内容 -->
+                    <form id="newDbForm" method="POST" action="/connect_new_db">
+                        <div class="mb-3">
+                            <label for="new_db_name" class="form-label">数据库名称</label>
+                            <input type="text" class="form-control" id="new_db_name" name="new_db_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_db_host" class="form-label">主机地址</label>
+                            <input type="text" class="form-control" id="new_db_host" name="new_db_host" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_db_port" class="form-label">端口</label>
+                            <input type="number" class="form-control" id="new_db_port" name="new_db_port" value="3306" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_db_user" class="form-label">用户名</label>
+                            <input type="text" class="form-control" id="new_db_user" name="new_db_user" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_db_password" class="form-label">密码</label>
+                            <input type="password" class="form-control" id="new_db_password" name="new_db_password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new_db_database" class="form-label">数据库名</label>
+                            <input type="text" class="form-control" id="new_db_database" name="new_db_database" required>
+                        </div>
+
+                        <!-- SSH 开关 -->
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="use_ssh" name="use_ssh">
+                            <label class="form-check-label" for="use_ssh">启用 SSH 隧道</label>
+                        </div>
+
+                        <!-- SSH 配置 -->
+                        <div id="sshConfig" style="display: none;">
+                            <div class="mb-3">
+                                <label for="ssh_host" class="form-label">SSH 主机地址</label>
+                                <input type="text" class="form-control" id="ssh_host" name="ssh_host">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ssh_port" class="form-label">SSH 端口</label>
+                                <input type="number" class="form-control" id="ssh_port" name="ssh_port" value="22">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ssh_user" class="form-label">SSH 用户名</label>
+                                <input type="text" class="form-control" id="ssh_user" name="ssh_user">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ssh_password" class="form-label">SSH 密码</label>
+                                <input type="password" class="form-control" id="ssh_password" name="ssh_password">
+                            </div>
+                            <div class="mb-3">
+                                <label for="ssh_pkey" class="form-label">SSH 私钥</label>
+                                <textarea class="form-control" id="ssh_pkey" name="ssh_pkey" rows="3"></textarea>
+                                <small class="form-text text-muted">如果需要使用私钥认证，请粘贴私钥内容。</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="submit" form="newDbForm" class="btn btn-primary">连接</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 数据库表和数据展示 -->
+    <div class="main-content">
+        {% if current_db %}
+            <div class="sidebar">
+                <h3>数据库表</h3>
+                <p>当前数据库：{{ current_db }}</p>
+                <p>表数量：{{ get_table_names(databases[current_db]) | length }}</p>
+                {% for table in get_table_names(databases[current_db]) %}
+                    <div class="table-card">
+                        <a href="{{ url_for('manage', table_name=table) }}">{{ table }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if table_name %}
+            <div class="card p-4 shadow">
+                <h2 class="mb-4">表名：{{ table_name }}</h2>
+
+                <!-- 操作按钮组 -->
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <button class="btn btn-custom" onclick="toggleComment()">查看注释</button>
+                    <button class="btn btn-custom" onclick="toggleIndexes()">查看索引</button>
+                    <a href="{{ url_for('export_csv', table_name=table_name) }}" class="btn btn-success">导出为 CSV</a>
+                </div>
+
+                <!-- 注释和索引内容 -->
+                <div id="comment" class="mb-4" style="display: none;">
+                    <h4>注释</h4>
+                    <p>{{ comment }}</p>
+                </div>
+
+                <div id="indexes" class="mb-4" style="display: none;">
+                    <h4>索引信息</h4>
+                    <ul>
+                        {% for index in indexes %}
+                            <li>
+                                <strong>索引名：</strong>{{ index['name'] }}<br>
+                                <strong>列名：</strong>{{ index['column_names'] }}<br>
+                                <strong>是否唯一：</strong>{{ index['unique'] }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- 每页行数选择和分页 -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <label for="per_page" class="form-label me-2">每页显示行数：</label>
+                        <select id="per_page" class="form-select d-inline-block w-auto" onchange="changePerPage(this.value)">
+                            <option value="10" {% if per_page == 10 %}selected{% endif %}>10</option>
+                            <option value="50" {% if per_page == 50 %}selected{% endif %}>50</option>
+                            <option value="100" {% if per_page == 100 %}selected{% endif %}>100</option>
+                        </select>
+                    </div>
+                    <nav>
+                        <ul class="pagination mb-0">
+                            {% if page > 1 %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{{ url_for('manage', table_name=table_name, page=page - 1, per_page=per_page) }}">上一页</a>
+                                </li>
+                            {% endif %}
+                            <li class="page-item">
+                                <input type="number" class="form-control" value="{{ page }}" onchange="goToPage(this.value)" style="width: 60px;" min="1">
+                            </li>
+                            {% if page * per_page < total_count %}
+                                <li class="page-item">
+                                    <a class="page-link" href="{{ url_for('manage', table_name=table_name, page=page + 1, per_page=per_page) }}">下一页</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- 表格内容 -->
+                <h4 class="mt-4">表格内容</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                {% for column in columns %}
+                                    <th>{{ column }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in rows %}
+                                <tr>
+                                    {% for value in row %}
+                                        <td class="text-truncate" style="max-width: 150px;" onclick="showFullText(this)">
+                                            {{ value }}
+                                        </td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% else %}
+            <div class="card p-4 shadow">
+                <h2 class="mb-4">欢迎使用数据库管理工具</h2>
+                <p>请从左侧选择一个表格以查看内容。</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- 黑暗模式切换按钮 -->
+    <div class="switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <label for="dark-mode-toggle"></label>
+    </div>
+
+    <!-- 加载 Bootstrap 的 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // 切换 SSH 配置显示
+        const useSshCheckbox = document.getElementById('use_ssh');
+        const sshConfigDiv = document.getElementById('sshConfig');
+
+        useSshCheckbox.addEventListener('change', function () {
+            if (this.checked) {
+                sshConfigDiv.style.display = 'block';
+            } else {
+                sshConfigDiv.style.display = 'none';
+            }
+        });
+
+        // 切换注释显示
+        function toggleComment() {
+            const commentDiv = document.getElementById('comment');
+            commentDiv.style.display = commentDiv.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // 切换索引显示
+        function toggleIndexes() {
+            const indexesDiv = document.getElementById('indexes');
+            indexesDiv.style.display = indexesDiv.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // 更改每页行数
+        function changePerPage(perPage) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('per_page', perPage);
+            url.searchParams.set('page', 1);  // 重置到第一页
+            window.location.href = url.toString();
+        }
+
+        // 跳转到指定页
+        function goToPage(page) {
+            const url = new URL(window.location.href);
+            const perPage = url.searchParams.get('per_page') || 10; // 获取当前每页行数
+
+            // 确保页码不小于 1
+            if (page < 1) {
+                page = 1;
+            }
+
+            // 更新 URL 参数
+            url.searchParams.set('page', page);
+            url.searchParams.set('per_page', perPage);
+
+            // 跳转到新 URL
+            window.location.href = url.toString();
+        }
+
+        // 显示完整内容
+        function showFullText(element) {
+            const fullText = element.innerText; // 获取完整内容
+            document.getElementById('fullTextContent').innerText = fullText; // 插入到模态框中
+            const modal = new bootstrap.Modal(document.getElementById('fullTextModal')); // 初始化模态框
+            modal.show(); // 显示模态框
+        }
+
+        // 黑暗模式切换
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // 初始化黑暗模式
+        if (localStorage.getItem('dark-mode') === 'true') {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        // 切换黑暗模式
+        darkModeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
+        });
+    </script>
+</body>
+</html>
